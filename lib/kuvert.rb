@@ -130,7 +130,6 @@ class Kuvert
       if(args.length != 0)
         super(methId, args)
       end
-      headers = get_header(name)
       return(get_header(name))
     end
   end
@@ -360,7 +359,7 @@ protected
 
   # returns a base64 encoded version of the contents of str
   def file_encode(str)
-    collection = Array.new()
+    # collection = Array.new()
     enc = [str].pack('m')
     #  while(enc.length > 60)
     #    collection << enc.slice!(0..59)
